@@ -25,7 +25,7 @@ hist(randu[,1])
 plot(randu[,1])  #ez még egyenletes
 plot(randu[,3]-6*randu[,2]+9*randu[,1])  #igy már nem egyenletes
 
-??plot3d
+
 install.packages("rgl") #MENÜ
 library(rgl) #LOAD
 plot3d(randu[,1],randu[,2],randu[,3])
