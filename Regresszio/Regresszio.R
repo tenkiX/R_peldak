@@ -19,15 +19,18 @@ abline(model,col="red",lwd=2,lty=2)  #illesztett egyenes rajzolása
 #Diagnostic plots: NOT a plot of the model itself!
 #plot(model)  #Residual plot; QQplot  
 
-#Elõrejelzés
-model$coefficients
-model$coefficients[1]+model$coefficients[2]* 2 #elõrejelzés Y=Intercept+Slope*30
-#VAGY
-predict(model,newdata=data.frame(x=2))  #elõrejelzés X=30-ra
-#ábrán
+#Elõrejelzés 
 plot(x,y)  
-abline(model,col="red",lwd=2,lty=2)  
+abline(model,col="red",lwd=2,lty=2)
+#A verzió  (Yi=B0+Bi*xi) x=2-re
+
+model$coefficients
+model$coefficients[1]+model$coefficients[2]* 2 #elõrejelzés Y=Intercept+Slope*2
 points(2,model$coefficients[1]+model$coefficients[2]*2,col="blue",lwd=3,pch=2)
+
+#VAGY elõrejelzés B verzió x=1-re
+predict(model,newdata=data.frame(x=1))  #elõrejelzés X=1-re
+points(1,predict(model,newdata=data.frame(x=1)),col="green",lwd=3,pch=2)
 
 
 #Hiba
@@ -72,9 +75,9 @@ plot(x,y)
 
 #Fitting a kvadratic model 
 model<-lm(y~x+I(x^2));model  #parabola
-summary(model)
+summary(model)                                                                                   
 
-#Reduced model
+#Reduced model magyarázat a többváltozósnél lejjebb
 model<-lm(y~I(x^2));model  #parabola
 summary(model)
 
@@ -90,11 +93,11 @@ y<-x+log(x)+rnorm(10,3,2)
 
 plot(x,y)
 
-#Fitting a kvadratic model 
-model<-lm(y~x+I(log(x)));model  #parabola
+#Fitting a log model 
+model<-lm(y~x+I(log(x)));model  
 summary(model)
 
-#Parabola illesztés
+#illesztés
 f<-model$coefficients[1]+model$coefficients[2]*seq(0,10,0.1)+model$coefficients[3]*log(seq(0,10,0.1))
 points(seq(0,10,0.1),f,type="l",col="red")
 
