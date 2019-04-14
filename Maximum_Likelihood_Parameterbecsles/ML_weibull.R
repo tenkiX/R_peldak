@@ -1,4 +1,5 @@
 #Weibull eloszlás c=0 -eltolás, a-alak (shape), b -skála (scale), paraméterrel
+n<-1000
 
 #1. eset: Exponenciális
 a<-0.5 #alak (shape), ezt fogjuk becsülni!!!
