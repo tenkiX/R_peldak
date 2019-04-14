@@ -1,6 +1,6 @@
 #CHT Weibull eloszlással szemléltetés
 n<-10000 
-
+k<-10
 b<-1  #skála
 a<-1  #alak
 x<-rweibull(n,a,b);
