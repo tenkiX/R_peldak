@@ -1,6 +1,6 @@
 #CHT szemléltetése gamma eloszlással 
 n<-10000 
-
+k<-10
 b<-1  #skála 
 a<-1  #alak
 x<-rgamma(n,a,b);
