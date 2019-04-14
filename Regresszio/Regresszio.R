@@ -3,17 +3,21 @@ x<-runif(10,-5,5)  #Magyarázó változó (independent)
 y<-x+rnorm(10,2,1)#Függõ változó (dependent)
 
 #Fitting a linear model 
-model<-lm(y~x);model  #egyenes
+model<-lm(y~x);model  #egyenes, kiírt dolgok: tengelymetszet (intercept), meredekség (x)
 
 #Summary of the model
-summary(model)  #Mi micsoda?
+summary(model)  
+#kiírt dolgok: 
+#tengelymetszet (intercept) 	H0 nullhipotézis	t,pr pedig a hipo-k paraméterei. ha p<0.025 elvetjük H0-t és H1-et fogadjuk el	
+#meredekség (x)			H1			
+#minél több csillagunk van annál jobb
 
 #Grafika
 plot(x,y)  #pontpárok kirajzolása
-abline(model,col="red",lwd=2,lty=2)  #ilesztett egyenes rajzolása
+abline(model,col="red",lwd=2,lty=2)  #illesztett egyenes rajzolása
 
 #Diagnostic plots: NOT a plot of the model itself!
-plot(model)  #Residual plot; QQplot 
+#plot(model)  #Residual plot; QQplot  
 
 #Elõrejelzés
 model$coefficients
