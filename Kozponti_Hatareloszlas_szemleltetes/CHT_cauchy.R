@@ -1,6 +1,6 @@
 #CHT Cauchy szemléltetés
 n<-10000 
-
+k<-10 #dobások száma
 l<-0 #location
 s<-1 #scale
 x<-rcauchy(n,l,s);x

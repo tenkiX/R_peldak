@@ -1,9 +1,9 @@
 #CHT szemléltetése normál eloszlással 
 n<-10000 
-
+k<-10
 m<-2 #várható érték
 sd<-10  #szórás
-x<-rnorm(n,mean,sd);
+x<-rnorm(n,m,sd);
 
 X<-matrix(x,ncol=k)
 head(X)
