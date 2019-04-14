@@ -88,7 +88,7 @@ text(k4,h4,"4",c(1,0))
 #5. Egyéni ötlet:
 w5<-c(0,0.3,0,0.2,0.1,0.2,0,0,0,0,0.2)
 sum(w5)
-h5<-sum(r*w4);h4
+h5<-sum(r*w5);h5
 k5<-sqrt(w5%*%cov(X)%*%w5);k5
 points(k5,h5,col="green",pch=16)
 text(k5,h5,"5",c(1,0))
