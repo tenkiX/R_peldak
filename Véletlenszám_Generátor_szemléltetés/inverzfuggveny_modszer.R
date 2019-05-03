@@ -1,6 +1,6 @@
 #Inverz fgv módszer általánosan
 
-#1. álltás Exp(lambda) #ennek normál eloszlásra kell hasonlítani
+#1. álltás Exp(lambda) #ennek egyenletes eloszlásra kell hasonlítani
 n<-1000
 lambda<-2
 rexp(n, rate=lambda)
@@ -9,7 +9,7 @@ par(mfrow=c(1,2))
 plot(1:n,x)
 hist(x)
 
-#1. állítás: norm(mean,sd) #ennek normál eloszlásra kell hasonlítani
+#1. állítás: norm(mean,sd) #ennek egyenletes eloszlásra kell hasonlítani
 n<-1000
 m<-2
 s<-1
